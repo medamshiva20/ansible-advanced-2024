@@ -1,0 +1,5 @@
+- name: Executing playbook through ansible.cfg
+  hosts: centos
+  tasks:
+   - name: print the message
+     ansible.builtin.shell: echo Hello I am from ansible server > hello.txt
