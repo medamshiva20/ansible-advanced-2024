@@ -1,0 +1,14 @@
+- name: Testing the parallelism concept
+  hosts: nginx
+  become: yes
+  tasks:
+   - name: Install nginx package
+     ansible.builtin.yum:
+      name: nginx
+      state: installed
+      update_cache: yes
+      
+   - name: Start the nginx service 
+     ansible.builtin.service:
+      name: nginx 
+      state: started
