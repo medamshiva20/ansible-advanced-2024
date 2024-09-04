@@ -5,3 +5,12 @@
    - name: Gathering the facts from managed nodes
      ansible.builtin.debug:
       msg: "All facts:{{ansible_facts}}"
+      # just imagine we don't have user module available
+
+   - name: add user in ubuntu
+     ansible.builtin.command: adduser siva
+     when: ansible_facts['distribution'] == "ubuntu"
+    
+   - name: add user in centos
+     ansible.builtin.command: useradd siva
+     when: ansible_facts['distribution'] == "centos"
