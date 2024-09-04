@@ -60,6 +60,7 @@
      ansible.builtin.command: npm install
      args:
       chdir: /app
+     tags: deployment
    - name: copy catalogue service
      ansible.builtin.copy:
       src: catalogue.service
