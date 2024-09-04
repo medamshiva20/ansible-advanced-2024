@@ -3,5 +3,5 @@
   become: yes
   tasks:
    - name: Gathering the facts from managed nodes
-     ansible.builti.debug:
+     ansible.builtin.debug:
       msg: "All facts:{{ansible_facts}}"
