@@ -17,7 +17,7 @@
       msg: "Course is :{{COURSE | default('DevOps')}}"
    - name: splitting hostname 
      debug:
-      msg: "website | urlsplit('hostname')"
+      msg: "{{website | urlsplit('hostname')}}"
    - name: splitting greeting
      debug:
-      msg: "Greeting | split(',')"
+      msg: "{{Greeting | split(',')}}"
