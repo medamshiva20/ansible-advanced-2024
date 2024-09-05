@@ -1,5 +1,5 @@
 - name: Testing the facts 
-  hosts: centos
+  hosts: centos:ubuntu #all
   become: yes
   tasks:
    - name: Gathering the facts from managed nodes
