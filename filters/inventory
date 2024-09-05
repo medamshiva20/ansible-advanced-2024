@@ -1,0 +1,5 @@
+[centos]
+172.31.22.85 ansible_user=centos ansible_ssh_pass=DevOps321
+
+[ubuntu]
+172.31.86.201 ansible_user=ubuntu ansible_ssh_pass=ubuntu

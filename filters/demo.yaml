@@ -1,0 +1,9 @@
+- name: Testing filters through ansible playbook 
+  hosts: centos:ubuntu
+  become: yes
+  var:
+   NAME: Siva Reddy Medam
+  tasks:
+   - name: convert into upper case
+     debug:
+      msg: "Hello {{NAME | upper}}"
